@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Something For You ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Patrick+Hand&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="bg bg-pink"></div>
+    <div class="bg bg-green"></div>
+    <div class="bg bg-yellow"></div>
+
+
+    <!-- =====================================================
+         MUSIC
+    ====================================================== -->
+
+    <button id="musicButton" class="music-button">
+        ♫
+    </button>
+
+    <audio id="music" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =====================================================
+         MAIN CARD
+    ====================================================== -->
+
+    <main class="card">
+
+
+        <!-- =================================================
+             SLIDE 0 — SURAT PEMBUKA
+        ================================================== -->
+
+        <section class="slide active" id="slide0">
+
+            <div class="slide-content opening">
+
+                <p class="mini-title">
+                    HEY, YOU...
+                </p>
+
+
+                <!-- SURAT -->
+
+                <div class="envelope">
+
+                    <div class="envelope-back"></div>
+
+                    <div class="letter-paper">
+
+                        <div class="letter-small">
+                            a little invitatin
+                        </div>
+
+                        <div class="letter-title">
+                            For You ♡
+                        </div>
+
+                        <div class="letter-flower">
+                            🌷
+                        </div>
+
+                    </div>
+
+                    <div class="envelope-flap"></div>
+
+                </div>
+
+
+                <p class="opening-text">
+                    I have something<br>
+                    special for you...
+                </p>
+
+
+                <button
+                    class="pink-button"
+                    onclick="goNext()"
+                >
+                    Open it ♡
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SLIDE 1 — AJAKAN DATE
+        ================================================== -->
+
+        <section class="slide" id="slide1">
+
+            <div class="slide-content">
+
+                <p class="mini-title">
+                    SPECIAL INVITATION
+                </p>
+
+
+                <div class="tiny-heart">
+                    ♡
+                </div>
+
+
+                <!-- FOTO -->
+
+                <div class="photo-frame">
+
+                    <img
+                        src="assets/foto.jpeg"
+                        alt="Our Photo"
+                    >
+
+                </div>
+
+
+                <h1>
+                    Would You Like To
+                    <br>
+
+                    <span>
+                        Go Out With Me?
+                    </span>
+                </h1>
+
+
+                <p class="from-text">
+                    from ur lovely bf ♡
+                </p>
+
+
+                <button
+                    class="pink-button"
+                    onclick="goNext()"
+                >
+                    Yes ♡
+                </button>
+
+
+                <button
+                    id="dateNo"
+                    class="no-button"
+                >
+                    No
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SLIDE 2 — DINNER DATE
+        ================================================== -->
+
+        <section class="slide" id="slide2">
+
+            <div class="slide-content">
+
+                <p class="mini-title">
+                    LETS GOO KITA AKAN MELAKUKANN :
+                </p>
+
+
+                <div class="big-icon">
+                    🍽️
+                </div>
+
+
+                <h2>
+                    Birthday
+                    <br>
+
+                    <span>
+                        Dinner Date
+                    </span>
+                </h2>
+
+
+                <p class="sub-text">
+                    Because your birthday deserves
+                    a special dinner with me.
+                </p>
+
+
+                <!-- DETAIL DINNER -->
+
+                <div class="details">
+
+                    <div class="detail">
+
+                        <span class="detail-icon">
+                            📅
+                        </span>
+
+                        <div>
+
+                            <small>
+                                DATE
+                            </small>
+
+                            <p>
+                                16 October 2026
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-icon">
+                            🕖
+                        </span>
+
+                        <div>
+
+                            <small>
+                                TIME
+                            </small>
+
+                            <p>
+                                19.00 WIB
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-icon">
+                            📍
+                        </span>
+
+                        <div>
+
+                            <small>
+                                PLACE
+                            </small>
+
+                            <p>
+                                PBTP Pasta BXC
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-icon">
+                            👗
+                        </span>
+
+                        <div>
+
+                            <small>
+                                DRESS CODE
+                            </small>
+
+                            <p>
+                                Pretty as always ♡
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="pink-button"
+                    onclick="goNext()"
+                >
+                    Continue ♡
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SLIDE 3 — STAYCATION
+        ================================================== -->
+
+        <section class="slide" id="slide3">
+
+            <div class="slide-content">
+
+                <p class="mini-title">
+                    HEYY BEYY ..
+                </p>
+
+
+                <div class="big-icon">
+                    🏨
+                </div>
+
+
+                <h2>
+                    After Dinner...
+                    <br>
+
+                    <span>
+                        Staycation?
+                    </span>
+                </h2>
+
+
+                <p class="sub-text">
+                    Maybe we can continue our little
+                    birthday adventure together.
+                </p>
+
+
+                <!-- STAYCATION INFO -->
+
+                <div class="stay-card">
+
+                    <div class="stay-icon">
+                        🛏️
+                    </div>
+
+                    <div>
+
+                        <small>
+                            STAYCATION
+                        </small>
+
+                        <p>
+                            One cozy night together
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="pink-button"
+                    onclick="goNext()"
+                >
+                    YES, I'M IN ♡
+                </button>
+
+
+                <button
+                    id="stayNo"
+                    class="no-button"
+                >
+                    No
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SLIDE 4 — FINAL INVITATION
+        ================================================== -->
+
+        <section class="slide" id="slide4">
+
+            <div class="slide-content final-slide">
+
+                <div class="final-flower">
+                    🌸
+                </div>
+
+
+                <p class="mini-title">
+                    OFFICIAL INVITATION
+                </p>
+
+
+                <h2>
+                    A Special Day
+                    <br>
+
+                    <span>
+                        For You
+                    </span>
+                </h2>
+
+
+                <!-- SURAT FINAL -->
+
+                <div class="invitation-paper">
+
+                    <p class="dear">
+                        Dear Birthday Girl,
+                    </p>
+
+
+                    <p class="invitation-text">
+                        I would like to invite you
+                        to spend your special day
+                        with me.
+                    </p>
+
+
+                    <!-- DINNER RECAP -->
+
+                    <div class="recap">
+
+                        <div class="recap-icon">
+                            🍽️
+                        </div>
+
+                        <div class="recap-content">
+
+                            <strong>
+                                BIRTHDAY DINNER
+                            </strong>
+
+                            <p>
+                                16 October 2026
+                            </p>
+
+                            <p>
+                                19.00 WIB
+                            </p>
+
+                            <p>
+                                PBTP Pasta BXC
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="divider">
+                        ✦
+                    </div>
+
+
+                    <!-- STAYCATION RECAP -->
+
+                    <div class="recap">
+
+                        <div class="recap-icon">
+                            🏨
+                        </div>
+
+                        <div class="recap-content">
+
+                            <strong>
+                                STAYCATION
+                            </strong>
+
+                            <p>
+                                After dinner
+                            </p>
+
+                            <p>
+                                Easton Park Apartemen
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="final-message">
+
+                        One birthday.
+                        <br>
+
+                        One dinner.
+                        <br>
+
+                        One night together.
+                        <br>
+
+                        <span>
+                            And hopefully,
+                            lots of memories. ♡
+                        </span>
+
+                    </p>
+
+
+                    <p class="signature">
+                        Love,
+                        <br>
+
+                        <span>
+                            Restu
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FLOWER TRANSITION
+    ====================================================== -->
+
+    <div id="flowerTransition"></div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

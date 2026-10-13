@@ -1,0 +1,1116 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+
+    overflow: hidden;
+
+    font-family: "Poppins", sans-serif;
+
+    color: #5b4d52;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf9,
+            #fff7f8,
+            #f7fbf3
+        );
+}
+
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.bg {
+
+    position: fixed;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: .38;
+
+    pointer-events: none;
+}
+
+
+.bg-pink {
+
+    background: #ffd2dc;
+
+    left: -130px;
+
+    top: 10%;
+}
+
+
+.bg-green {
+
+    background: #dcebd6;
+
+    right: -140px;
+
+    bottom: 10%;
+}
+
+
+.bg-yellow {
+
+    background: #fff0c4;
+
+    left: 35%;
+
+    top: -170px;
+}
+
+
+/* ==========================================================
+   MUSIC BUTTON
+========================================================== */
+
+.music-button {
+
+    position: fixed;
+
+    top: 18px;
+
+    right: 18px;
+
+    z-index: 500;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(180,130,140,.2);
+
+    background:
+        rgba(255,255,255,.75);
+
+    color: #c65b75;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================================
+   MAIN CARD
+========================================================== */
+
+.card {
+
+    position: relative;
+
+    width: min(88vw, 390px);
+
+    height: min(90vh, 620px);
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        rgba(251,255,249,.88);
+
+    border:
+        1px solid
+        rgba(255,255,255,.95);
+
+    box-shadow:
+        0 25px 70px
+        rgba(100,75,85,.13);
+
+    backdrop-filter:
+        blur(18px);
+}
+
+
+/* ==========================================================
+   SLIDES
+========================================================== */
+
+.slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    padding:
+        42px 28px 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform:
+        translateX(35px)
+        scale(.98);
+
+    pointer-events: none;
+
+    transition:
+        opacity .35s ease,
+        transform .45s ease;
+}
+
+
+.slide.active {
+
+    opacity: 1;
+
+    transform:
+        translateX(0)
+        scale(1);
+
+    pointer-events: auto;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.slide-content {
+
+    width: 100%;
+
+    max-height: 100%;
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+}
+
+
+.slide-content::-webkit-scrollbar {
+
+    display: none;
+}
+
+
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+.mini-title {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #b98794;
+
+    margin-bottom: 15px;
+}
+
+
+h1,
+h2 {
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-weight: 400;
+
+    color: #53474c;
+
+    line-height: 1.02;
+}
+
+
+h1 {
+
+    font-size: 40px;
+}
+
+
+h2 {
+
+    font-size: 41px;
+}
+
+
+h1 span,
+h2 span {
+
+    color: #d45e79;
+}
+
+
+.sub-text {
+
+    max-width: 285px;
+
+    margin:
+        16px auto;
+
+    color: #8a797f;
+
+    font-size: 11px;
+
+    line-height: 1.75;
+}
+
+
+.from-text {
+
+    font-size: 10px;
+
+    color: #a08c93;
+
+    margin-top: 10px;
+}
+
+
+/* ==========================================================
+   OPENING LETTER
+========================================================== */
+
+.opening {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.opening-text {
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 20px;
+
+    line-height: 1.15;
+
+    color: #75656b;
+
+    margin-top: 3px;
+}
+
+
+/* ==========================================================
+   ENVELOPE
+========================================================== */
+
+.envelope {
+
+    position: relative;
+
+    width: 190px;
+
+    height: 145px;
+
+    margin:
+        5px auto 20px;
+}
+
+
+.envelope-back {
+
+    position: absolute;
+
+    width: 175px;
+
+    height: 115px;
+
+    left: 8px;
+
+    top: 25px;
+
+    background: #efd5c9;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(90,65,65,.14);
+}
+
+
+.letter-paper {
+
+    position: absolute;
+
+    z-index: 2;
+
+    width: 110px;
+
+    height: 85px;
+
+    left: 40px;
+
+    top: 4px;
+
+    padding: 12px 8px;
+
+    background: #fffaf1;
+
+    box-shadow:
+        0 5px 14px
+        rgba(90,60,60,.12);
+
+    transform:
+        rotate(-2deg);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.letter-small {
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 11px;
+
+    color: #a38b91;
+}
+
+
+.letter-title {
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 23px;
+
+    color: #ca5c76;
+}
+
+
+.letter-flower {
+
+    font-size: 20px;
+
+    margin-top: 2px;
+}
+
+
+.envelope-flap {
+
+    position: absolute;
+
+    z-index: 3;
+
+    left: 8px;
+
+    top: 25px;
+
+    width: 0;
+
+    height: 0;
+
+    border-left:
+        87px solid transparent;
+
+    border-right:
+        87px solid transparent;
+
+    border-top:
+        65px solid #f4ddd3;
+}
+
+
+/* ==========================================================
+   PHOTO
+========================================================== */
+
+.photo-frame {
+
+    width: 165px;
+
+    height: 165px;
+
+    margin:
+        3px auto 18px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #eee;
+
+    box-shadow:
+        0 10px 22px
+        rgba(90,65,75,.13);
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   ICONS
+========================================================== */
+
+.tiny-heart {
+
+    font-size: 28px;
+
+    color: #d65f7b;
+
+    margin-bottom: 6px;
+}
+
+
+.big-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 9px;
+}
+
+
+.final-flower {
+
+    font-size: 27px;
+
+    margin-bottom: 3px;
+}
+
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.pink-button {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 245px;
+
+    margin:
+        19px auto 0;
+
+    padding:
+        12px 20px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #d7607c;
+
+    color: white;
+
+    font-family: Poppins;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(215,96,124,.2);
+
+    transition: .25s;
+}
+
+
+.pink-button:hover {
+
+    background: #c9516e;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.no-button {
+
+    display: block;
+
+    margin:
+        8px auto 0;
+
+    padding: 5px 15px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #9b8a90;
+
+    font-family: Poppins;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        transform .12s ease;
+}
+
+
+/* ==========================================================
+   DINNER DETAILS
+========================================================== */
+
+.details {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+.detail {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        11px 8px;
+
+    text-align: left;
+
+    border-radius: 11px;
+
+    background: #fffaf8;
+}
+
+
+.detail-icon {
+
+    font-size: 18px;
+}
+
+
+.detail small {
+
+    display: block;
+
+    color: #be8794;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 3px;
+}
+
+
+.detail p {
+
+    font-size: 9px;
+
+    color: #6e6065;
+}
+
+
+/* ==========================================================
+   STAYCATION
+========================================================== */
+
+.stay-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    max-width: 270px;
+
+    margin:
+        20px auto 0;
+
+    padding: 13px 15px;
+
+    text-align: left;
+
+    border-radius: 13px;
+
+    background: #fffaf8;
+}
+
+
+.stay-icon {
+
+    font-size: 27px;
+}
+
+
+.stay-card small {
+
+    display: block;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: #bd8794;
+
+    margin-bottom: 3px;
+}
+
+
+.stay-card p {
+
+    font-size: 10px;
+
+    color: #716167;
+}
+
+
+/* ==========================================================
+   FINAL INVITATION
+========================================================== */
+
+.final-slide {
+
+    padding-bottom: 15px;
+}
+
+
+.invitation-paper {
+
+    margin-top: 13px;
+
+    padding:
+        16px 17px;
+
+    text-align: left;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,250,246,.82);
+
+    border:
+        1px solid
+        rgba(210,150,165,.15);
+}
+
+
+.dear {
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 18px;
+
+    color: #bd5c75;
+
+    margin-bottom: 7px;
+}
+
+
+.invitation-text {
+
+    font-size: 9px;
+
+    line-height: 1.65;
+
+    color: #77676d;
+
+    margin-bottom: 12px;
+}
+
+
+/* ==========================================================
+   RECAP
+========================================================== */
+
+.recap {
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: flex-start;
+}
+
+
+.recap-icon {
+
+    font-size: 22px;
+
+    line-height: 1;
+}
+
+
+.recap-content strong {
+
+    display: block;
+
+    color: #b95c74;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 4px;
+}
+
+
+.recap-content p {
+
+    font-size: 8px;
+
+    color: #75666c;
+
+    line-height: 1.55;
+}
+
+
+.divider {
+
+    text-align: center;
+
+    color: #d68b9d;
+
+    font-size: 10px;
+
+    margin:
+        9px 0;
+}
+
+
+/* ==========================================================
+   FINAL MESSAGE
+========================================================== */
+
+.final-message {
+
+    text-align: center;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 16px;
+
+    line-height: 1.15;
+
+    color: #76666d;
+
+    margin-top: 13px;
+}
+
+
+.final-message span {
+
+    color: #c45a73;
+}
+
+
+.signature {
+
+    text-align: right;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 15px;
+
+    line-height: 1.05;
+
+    color: #9b858c;
+
+    margin-top: 9px;
+}
+
+
+.signature span {
+
+    color: #c85d76;
+
+    font-size: 19px;
+}
+
+
+/* ==========================================================
+   FLOWER TRANSITION
+========================================================== */
+
+#flowerTransition {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    background:
+        #fffaf5;
+}
+
+
+#flowerTransition.active {
+
+    display: block;
+}
+
+
+/*
+    Banyak bunga kecil.
+    Bunga akan muncul dari berbagai posisi
+    sampai layar tertutup.
+*/
+
+.transition-flower {
+
+    position: absolute;
+
+    left: var(--x);
+
+    top: var(--y);
+
+    width: var(--size);
+
+    height: var(--size);
+
+    opacity: 0;
+
+    transform:
+        scale(0)
+        rotate(0deg);
+
+    animation:
+        flowerTransition
+        1.05s
+        ease-in-out
+        forwards;
+
+    animation-delay:
+        var(--delay);
+}
+
+
+/* empat kelopak */
+
+.transition-flower::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 8%;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 8%,
+            var(--flower)
+            0 29%,
+            transparent 31%
+        ),
+
+        radial-gradient(
+            circle at 92% 50%,
+            var(--flower)
+            0 29%,
+            transparent 31%
+        ),
+
+        radial-gradient(
+            circle at 50% 92%,
+            var(--flower)
+            0 29%,
+            transparent 31%
+        ),
+
+        radial-gradient(
+            circle at 8% 50%,
+            var(--flower)
+            0 29%,
+            transparent 31%
+        );
+}
+
+
+/* tengah bunga */
+
+.transition-flower::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 18%;
+
+    height: 18%;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        var(--center);
+}
+
+
+@keyframes flowerTransition {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            scale(.1)
+            rotate(-30deg);
+
+    }
+
+    25% {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotate(30deg);
+
+    }
+
+    60% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.7)
+            rotate(120deg);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            scale(2.8)
+            rotate(250deg);
+
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-height: 680px) {
+
+    .card {
+
+        height: 94vh;
+    }
+
+
+    .photo-frame {
+
+        width: 135px;
+
+        height: 135px;
+    }
+
+
+    h1 {
+
+        font-size: 34px;
+    }
+
+
+    h2 {
+
+        font-size: 35px;
+    }
+
+
+    .details {
+
+        gap: 6px;
+    }
+
+
+    .detail {
+
+        padding: 8px 6px;
+    }
+
+}
